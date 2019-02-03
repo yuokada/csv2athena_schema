@@ -33,16 +33,16 @@ class StoreDictKeyPair(argparse.Action):
 def get_serdes():
     return [
         'org.apache.hadoop.hive.serde2.OpenCSVSerde',
-        'org.apache.hadoop.hive.serde2.avro.AvroSerDe',
-        'org.apache.hadoop.hive.serde2.RegexSerDe',
-        'com.amazon.emr.hive.serde.CloudTrailSerde',
-        'com.amazonaws.glue.serde.GrokSerDe',
-        'org.apache.hive.hcatalog.data.JsonSerDe',
-        'org.openx.data.jsonserde.JsonSerDe',
         'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe',
+        'org.apache.hadoop.hive.serde2.RegexSerDe',
+        # 'org.apache.hadoop.hive.serde2.avro.AvroSerDe',
+        # 'com.amazon.emr.hive.serde.CloudTrailSerde',
+        # 'com.amazonaws.glue.serde.GrokSerDe',
+        # 'org.apache.hive.hcatalog.data.JsonSerDe',
+        # 'org.openx.data.jsonserde.JsonSerDe',
         # Unused
-        'ORC',
-        'PARQUET',
+        # 'ORC',
+        # 'PARQUET',
     ]
 
 
