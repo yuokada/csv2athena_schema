@@ -2,6 +2,7 @@
 import argparse
 import logging
 import os
+import textwrap
 
 import jinja2
 from messytables import CSVTableSet, offset_processor, headers_guess, type_guess, types_processor, headers_processor
@@ -119,7 +120,7 @@ def get_filename(filename):
 
 
 def build_ct(guess_data, arguments) -> str:
-    t = """
+    t = textwrap.dedent("""
     CREATE EXTERNAL TABLE {{ schema }} (
       {{table_fields|join(",\n      ")}}
     )
@@ -149,7 +150,7 @@ def build_ct(guess_data, arguments) -> str:
       'has_encrypted_data'='false'
     {% endif -%}
     );
-    """
+    """)
     # 1. csv -> Athena field type
     fields = convert_fields(guess_data, arguments.serde)
 
