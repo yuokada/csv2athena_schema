@@ -9,6 +9,10 @@ from messytables import CSVTableSet, offset_processor, headers_guess, type_guess
 from messytables.types import IntegerType, CellType, BoolType, StringType, DateType, DateUtilType, FloatType, \
     DecimalType
 
+__version__ = "0.1.0"
+__author__ = "Yukihiro Okada"
+__license__ = "MIT"
+
 logging.basicConfig(format='%(levelname)s:%(lineno)d:%(funcName)s: %(message)s', level=logging.WARN)
 logger = logging.getLogger(__name__)
 
@@ -27,7 +31,6 @@ class StoreDictKeyPair(argparse.Action):
             k, v = kv.split("=")
             properties[k] = v
         setattr(namespace, self.dest, properties)
-
 
 
 def get_serdes():
@@ -159,7 +162,6 @@ def build_ct(guess_data, arguments) -> str:
         tablename = arguments.schema + "." + get_filename(arguments.csvfile)
     else:
         tablename = get_filename(arguments.csvfile)
-
 
     template = jinja2.Template(t)
     ct = template.render(
