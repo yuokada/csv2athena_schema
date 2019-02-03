@@ -1,4 +1,17 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+#  Copyright (c) 2019. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+#  Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+#  Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+#  Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+#  Vestibulum commodo. Ut rhoncus gravida arcu.
+"""
+csv2schema - A python script to build athena create table from csv file.
+
+Require
+-  csvfile with header
+"""
 import argparse
 import logging
 import os
@@ -20,11 +33,15 @@ SCRIPT_NAME = 'csv2schema'
 
 
 class StoreDictKeyPair(argparse.Action):
+    """This class work for Argument parser."""
+
     def __init__(self, option_strings, dest, nargs=None, **kwargs):
+        """NOTE: TBD."""
         self._nargs = nargs
         super(StoreDictKeyPair, self).__init__(option_strings, dest, nargs=nargs, **kwargs)
 
     def __call__(self, parser, namespace, values, option_string=None):
+        """Parse document."""
         properties = {}
         "values: {}".format(values)
         for kv in values:

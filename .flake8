@@ -1,5 +1,5 @@
 [flake8]
-ignore = D103,D203,E501
+ignore = I101,I201,D103,D203
 exclude =
     # No need to traverse our git directory
     .git,
@@ -16,3 +16,4 @@ exclude =
     .tox
     setup.py
 max-complexity = 10
+max-line-length = 160
