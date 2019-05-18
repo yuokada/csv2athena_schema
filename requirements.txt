@@ -5,7 +5,7 @@ json-table-schema==0.2.1
 messytables==0.15.2
 python-magic==0.4.15
 requests==2.21.0
-urllib3=1.24.1
+urllib3>=1.24.1
 webencodings==0.5.1
 xlrd==1.2.0
 absl-py==0.6.1
