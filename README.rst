@@ -28,6 +28,13 @@ Install & Setup
     $ pip3 install -r requirements.txt
 
 
+Update requirements.txt
+-----------------------
+
+.. code-block:: bash
+
+    $ poetry export -o requirements.txt --without-hashes
+
 
 Execute script
 --------------
