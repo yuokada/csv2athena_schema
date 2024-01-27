@@ -1,0 +1,9 @@
+{
+    "name": "My Dev Container",
+    "dockerFile": "Dockerfile",
+    "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "ms-azuretools.vscode-docker",
+        "exiasr.hadolint"
+    ]
+}
